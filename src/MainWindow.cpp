@@ -188,6 +188,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_titleBar   = new TitleBar(this);
     m_geoPanel   = new GeoSyncPanel(m_model, this);
+    m_satCamera  = new SatCameraWidget(m_model, this);
     m_signalGraph= new SignalGraphWidget(m_model, this);
     m_ticker     = new TickerPanel(m_model, this);
     m_globe      = new GlobeWidget(m_model, this);
@@ -217,6 +218,7 @@ MainWindow::MainWindow(QWidget *parent)
     leftVbox->setContentsMargins(0, 0, 0, 0);
     leftVbox->setSpacing(4);
     leftVbox->addWidget(m_geoPanel,    1);
+    leftVbox->addWidget(m_satCamera,   0);
     leftVbox->addWidget(m_signalGraph, 0);
     leftVbox->addWidget(m_ticker,      0);
 
@@ -270,6 +272,7 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
 void MainWindow::onTick() {
     m_model->update(0.016f);
     m_geoPanel->refresh();
+    m_satCamera->refresh();
     m_signalGraph->refresh();
     m_ticker->refresh();
     m_radar->refresh();

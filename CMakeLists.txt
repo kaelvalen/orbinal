@@ -49,6 +49,7 @@ set(SOURCES
     src/CrtOverlay.cpp
     src/CudaCompute.cpp
     src/OrbitalKernels.cu
+    src/SatCameraWidget.cpp
 )
 
 set(HEADERS
@@ -62,6 +63,7 @@ set(HEADERS
     src/ContinentData.h
     src/CudaCompute.h
     src/OrbitalKernels.cuh
+    src/SatCameraWidget.h
 )
 
 add_executable(orbinal ${SOURCES} ${HEADERS})

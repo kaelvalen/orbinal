@@ -13,6 +13,7 @@
 #include "SignalGraphWidget.h"
 #include "RadarWidget.h"
 #include "CrtOverlay.h"
+#include "SatCameraWidget.h"
 
 class TickerPanel : public QWidget {
     Q_OBJECT
@@ -64,5 +65,6 @@ private:
     TickerPanel       *m_ticker;
     TitleBar          *m_titleBar;
     CrtOverlay        *m_crt;
+    SatCameraWidget   *m_satCamera;
     QTimer            *m_timer;
 };
