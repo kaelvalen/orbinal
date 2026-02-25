@@ -1,6 +1,6 @@
 # Orbinal — Real‑Time Satellite Telemetry HUD
 
-<img src="/home/kael/projects/hobby/ui-stuff/orbinal/image.png" alt="Orbinal Screenshot">
+![Orbinal Screenshot](image.png)
 
 **Orbinal** is a Qt‑based, GPU‑accelerated satellite tracking and telemetry visualization system.  
 It displays live orbital positions, signal waveforms, radar sweeps, and formatted telemetry data in a retro‑HUD style.
